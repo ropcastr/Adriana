@@ -1,0 +1,33 @@
+@startuml
+class Pessoa {
+  -nome: String
+  -forca: int
+  -posicao: String
+  +atacar(): void
+}
+
+class Trilhos {
+  -comprimento: float
+  -material: String
+  -bitola: float
+  +suportarTrem(): void
+}
+
+class Mala {
+  -tamanho: String
+  -material: String
+  -peso: float
+  +abrir(): void
+}
+
+class Vencedor {
+  -nome: String
+  -pontuacao: int
+  -tempoVitoria: String
+  +declararVitoria(): void
+}
+
+Pessoa "1,n" -- "0,1" Vencedor : luta
+Vencedor "1,1" -- "0,1" Mala : possui
+Pessoa "1,1" -- "0,n" Trilhos : está
+@enduml

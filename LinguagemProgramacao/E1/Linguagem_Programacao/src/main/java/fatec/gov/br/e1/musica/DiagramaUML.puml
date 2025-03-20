@@ -1,0 +1,89 @@
+@startuml
+title Diagrama de Classes UML\nBaseado em "Dezesseis" - Legião Urbana
+
+left to right direction
+
+skinparam dpi 150
+skinparam shadowing true
+skinparam nodesep 50
+skinparam ranksep 40
+
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #D3D3D3
+  FontName Arial
+  FontSize 12
+  ArrowColor #808080
+  ArrowThickness 1.2
+}
+
+skinparam note {
+  FontSize 11
+  FontName Arial
+  BorderThickness 1
+}
+
+' Classes
+class Pessoa {
+  - nome: String
+  - idade: int
+  - reputacao: String
+  --
+  + tocar()
+  + dirigirCarro()
+}
+
+class Carro {
+  - modelo: String
+  - cor: String
+  - motor: String
+  --
+  + roncarEmPega()
+}
+
+class Violao {
+  - cordas: int
+  - madeira: String
+  - timbre: String
+  --
+  + produzirSomParaConquistar()
+}
+
+class CurvaDoDiabo {
+  - localizacao: String
+  - perigosidade: int
+  - nome: String
+  --
+  + provocarAcidente()
+}
+
+' Relações com cardinalidades
+
+Pessoa "(0,1)" -- "(0,1)" Violao : possui >
+note on link #lightyellow
+  Pessoa–Violão:
+  • Por Pessoa → Violões: Mínima = 0 (não é obrigatório ter violão)
+   Máxima = n (pode ter muitos violões).
+  • Por Violão → Pessoas: Mínima = 0 (um violão pode não ter dono)
+   Máxima = 1 (um violão pertence a no máximo uma pessoa).
+end note
+
+Pessoa "(1,1)" -- "(0,1)" Carro : possui >
+note on link #lightblue
+  Pessoa–Carro:
+  • Por Pessoa → Carros: Mínima = 0 (não é obrigatório ter carro)
+   Máxima = 1 (no máximo um carro por pessoa).
+  • Por Carro → Pessoas: Mínima = 1 (cada carro tem exatamente um dono)
+   Máxima = 1 (não pode ter mais donos).
+end note
+
+Carro "(0,n)" -- "(0,1)" CurvaDoDiabo : colide >
+note on link #lightgreen
+  Carro–CurvaDoDiabo:
+  • Por Carro → Curvas: Mínima = 0 (um carro pode não colidir com nenhuma curva)
+   Máxima = 1 (um carro pode colidir com no máximo uma curva, como na explosão do Opala).
+  • Por Curva → Carros: Mínima = 0 (uma curva pode não ter acidentes com carros)
+   Máxima = n (uma curva, como a do Diabo, pode estar envolvida em muitos acidentes).
+end note
+
+@enduml

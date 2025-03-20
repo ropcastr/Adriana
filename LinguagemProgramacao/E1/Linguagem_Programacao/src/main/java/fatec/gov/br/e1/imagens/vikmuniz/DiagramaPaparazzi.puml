@@ -1,0 +1,25 @@
+@startuml
+class Fotografo {
+  - nome: String
+  - tipoCamera: String
+  - anosExperiencia: int
+  + tirarFoto(): void
+}
+
+class Camera {
+  - modelo: String
+  - lente: String
+  - resolucao: int
+  + capturarImagem(): void
+}
+
+class Microfone {
+  - marca: String
+  - comprimentoCabo: float
+  - sensibilidade: int
+  + capturaAudio(): void
+}
+
+Fotografo "0,n" -- "0,1" Camera : usa
+Fotografo "0,n" -- "0,1" Microfone : utiliza
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+class GamerRobot {
+  -level: int
+  -health: int
+  -score: int
+  +playGame()
+  +attackAlien()
+  +upgradeSetup()
+}
+
+class Alien {
+  -type: String
+  -strength: int
+  -health: String
+  +invade()
+  +defend()
+  +abduct()
+}
+
+class Spaceship {
+  -type: String
+  -weapons: int
+  -health: int
+  -alien: Alien
+  -gamerRobot: GamerRobot
+  +fly()
+  +shoot()
+  +land()
+}
+
+GamerRobot "1, 1" -- "0, n" Alien : fights >
+note on link
+  Um GamerRobot (1, 1) pode lutar contra zero ou vários Aliens (0, n),
+  o que é válido pois o GamerRobot pode existir sem Aliens.
+end note
+
+GamerRobot "0, 1" -- "1, 1" Spaceship : pilots >
+note on link
+  Um GamerRobot pode não ter uma Spaceship (0) ou ter exatamente uma (1),
+  enquanto uma Spaceship deve ter pelo menos um GamerRobot (1, 1) para ser pilotada,
+  evitando a obrigatoriedade mútua.
+end note
+
+Alien "0, n" -- "1, 1" Spaceship : arrives in >
+note on link
+  Zero ou vários Aliens (0, n) podem estar associados a uma Spaceship,
+  que é obrigatória (1, 1) para os Aliens chegarem.
+end note
+@enduml
