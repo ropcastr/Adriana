@@ -1,0 +1,144 @@
+/* ==========================================================================
+   TEMA GERAL (SEM FONTES)
+   ========================================================================== */
+
+.root {
+    /* Fundo com um cinza neutro para bom contraste */
+    -fx-background-color: #DDE1E4;
+
+    /* Paleta de cores principal */
+    -fx-primary: #0078D7;      /* Azul padrão Microsoft (moderno e profissional) */
+    -fx-primary-dark: #005A9E;   /* Variação escura para gradientes e efeitos */
+    -fx-focus-glow: rgba(0, 120, 215, 0.3); /* Cor do brilho de foco */
+
+    -fx-control-inner-background: #FFFFFF; /* Fundo de campos de texto, tabelas, etc. */
+    -fx-text-base-color: #1d1d1d; /* Cor base do texto (será sobreposta pelas suas definições) */
+    -fx-border-color: #ACACAC;
+}
+
+/* ==========================================================================
+   CAMPOS DE TEXTO E ÁREAS DE TEXTO
+   ========================================================================== */
+
+.text-field,
+.text-area {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-background-insets: 0;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-padding: 0.4em 0.6em; /* Padding responsivo ao tamanho da fonte */
+    -fx-prompt-text-fill: #888888;
+    -fx-highlight-fill: -fx-primary;
+    -fx-highlight-text-fill: white;
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.text-area .content {
+     -fx-background-color: -fx-control-inner-background;
+}
+
+.text-field:focused,
+.text-area:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(gaussian, -fx-focus-glow, 5, 0, 0, 0);
+}
+
+/* ==========================================================================
+   BOTÕES (COM PROFUNDIDADE E SEM EFEITO "FLAT")
+   ========================================================================== */
+
+.button {
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 0.5em 1.2em; /* Padding responsivo */
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-border-width: 1px;
+
+    /* Efeito de profundidade com gradiente e borda inferior */
+    -fx-background-color: linear-gradient(to bottom, -fx-primary, -fx-primary-dark);
+    -fx-border-color: -fx-primary-dark;
+
+    /* Sombra externa para "elevar" o botão */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.22), 5, 0, 0, 2);
+    -fx-transition: all 0.15s ease-out;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, lighten(-fx-primary, 5%), lighten(-fx-primary-dark, 5%));
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: -fx-primary-dark;
+    -fx-border-color: darken(-fx-primary-dark, 5%);
+    /* Move o botão para dar feedback de clique */
+    -fx-translate-y: 1px;
+    -fx-effect: none; /* Remove a sombra ao pressionar */
+}
+
+/* Estilo para botões secundários (ex: "Exibir CSV") */
+.secondary-button {
+    -fx-background-color: linear-gradient(to bottom, #F9F9F9, #E3E3E3);
+    -fx-text-fill: #333333;
+    -fx-border-color: #ADADAD;
+}
+
+.secondary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #E9E9E9);
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #E3E3E3;
+    -fx-border-color: #999999;
+}
+
+/* ==========================================================================
+   TABELAS (TableView)
+   ========================================================================== */
+
+.table-view {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+
+    /* Sombra para destacar a tabela do fundo da janela */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+/* Estilo do cabeçalho */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #F9F9F9, #ECECEC);
+    -fx-background-radius: 4px 4px 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0.5em;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent #E0E0E0 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-width: 0;
+}
+
+/* Linhas e Células */
+.table-row-cell {
+    -fx-background-color: -fx-control-inner-background;
+    -fx-border-color: transparent transparent #F0F0F0 transparent;
+    -fx-border-width: 1;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F9F9F9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}

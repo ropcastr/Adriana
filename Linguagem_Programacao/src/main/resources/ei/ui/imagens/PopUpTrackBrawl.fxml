@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneTrackBrawl" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e1.imagens.controllers.PopUpTrackBrawlController">
+   <children>
+      <TableView fx:id="tableViewPessoa" layoutX="4.0" layoutY="25.0" prefHeight="167.0" prefWidth="241.0">
+        <columns>
+          <TableColumn fx:id="tablePessoaColunaNome" prefWidth="106.0" text="Nome" />
+          <TableColumn fx:id="tablePessoaColunaForca" prefWidth="60.0" text="Forca" />
+            <TableColumn fx:id="tablePessoaColunaPosicao" prefWidth="74.0" text="Posição" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableViewTrilho" layoutX="253.0" layoutY="25.0" prefHeight="167.0" prefWidth="241.0">
+         <columns>
+            <TableColumn fx:id="tableTrilhoColunaComprimento" prefWidth="109.0" text="Comprimento(km)" />
+            <TableColumn fx:id="tableTrilhoColunaMaterial" prefWidth="62.0" text="Material" />
+            <TableColumn fx:id="tableTrilhoColunaBitola" prefWidth="74.0" text="Bitola(mm)" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableViewVencedor" layoutX="4.0" layoutY="219.0" prefHeight="167.0" prefWidth="241.0">
+         <columns>
+            <TableColumn fx:id="tableVencedorColunaNome" prefWidth="104.0" text="Nome" />
+            <TableColumn fx:id="tableVencedorColunaPontuacao" prefWidth="64.0" text="Pontuacao" />
+            <TableColumn fx:id="tableVencedorColunaTempoVitoria" prefWidth="72.0" text="Vitoria(seg)" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="txtAreaMetodosTrackBrawl" layoutX="252.0" layoutY="219.0" prefHeight="167.0" prefWidth="338.0" />
+      <Label layoutX="105.0" layoutY="6.0" text="Pessoa">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="6.0" text="Trilho">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="200.0" text="Vencedor">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="200.0" text="Método">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="167.0" fitWidth="89.0" layoutX="499.0" layoutY="25.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/track-brawl-cke.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

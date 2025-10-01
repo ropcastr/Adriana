@@ -1,0 +1,34 @@
+@startuml
+title Diagrama de Classes UML\nBaseado no vídeo - Make your own takeout beef\nhttps://x.com/noeldeyzel_body/status/1964922605632459204
+
+class Chef {
+  -nome: String
+  -experiencia: int
+  -specialidade: String
+  +prepararIngrediente()
+  +cozinhar()
+  +provarComida()
+}
+
+class Ingrediente {
+  -nome: String
+  -quantidade: double
+  -unidade: String
+  +limpar()
+  +cortar()
+  +temperar()
+}
+
+class Utensilio {
+  -tipo: String
+  -material: String
+  -tamanho: double
+  +preparar()
+  +aquecer()
+  +mexer()
+}
+
+Chef "0,1" -- "1,n" Utensilio : usa
+Chef "0,1" -- "1,n" Ingrediente : prepara
+Utensilio "0,n" -- "0,n" Ingrediente : retem
+@enduml

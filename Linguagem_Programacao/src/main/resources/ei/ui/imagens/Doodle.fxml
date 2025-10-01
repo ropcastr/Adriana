@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbox_doodle" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e1.imagens.controllers.DoodleController">
+   <children>
+      <AnchorPane fx:id="pane_hbox_robot" stylesheets="@../../css/Stylesheet.css" HBox.hgrow="ALWAYS">
+         <children>
+            <TextField fx:id="txt_robot_level" layoutX="71.0" layoutY="140.0" />
+            <Label layoutX="115.0" layoutY="34.0" text="Gamer Robot">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="145.0" text="Nível" />
+            <TextField fx:id="txt_robot_health" layoutX="71.0" layoutY="180.0" />
+            <Label layoutX="30.0" layoutY="185.0" text="Vida" />
+            <TextField fx:id="txt_robot_score" layoutX="71.0" layoutY="220.0" />
+            <Label layoutX="16.0" layoutY="225.0" text="Pontos" />
+            <Button fx:id="btn_robot" layoutX="106.0" layoutY="280.0" mnemonicParsing="false" text="Enviar Robô" />
+            <ImageView fitHeight="73.0" fitWidth="91.0" layoutX="113.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/GamerRobot.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="txt_area_robot" layoutX="30.0" layoutY="340.0" prefHeight="160.0" prefWidth="240.0" />
+            <Button fx:id="btn_robot_csv" layoutX="158.0" layoutY="510.0" mnemonicParsing="false" text="Gravar CSV" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="pane_hbox_tables" prefWidth="220.0" stylesheets="@../../css/Stylesheet.css">
+         <children>
+            <TableView fx:id="table_view_robot" layoutY="5.0" prefHeight="280.0" prefWidth="220.0">
+              <columns>
+                <TableColumn fx:id="colRobotLevel" prefWidth="70.0" text="Nível" />
+                <TableColumn fx:id="colRobotHealth" minWidth="0.0" prefWidth="72.0" text="Vida" />
+                <TableColumn fx:id="colRobotScore" prefWidth="72.0" text="Pontos" />
+              </columns>
+            </TableView>
+            <TableView fx:id="table_view_alien" layoutY="295.0" prefHeight="300.0" prefWidth="220.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="colAlienType" prefWidth="90.0" text="Tipo" />
+                  <TableColumn fx:id="colAlienStrength" prefWidth="62.0" text="Força" />
+                  <TableColumn fx:id="colAlienHealth" prefWidth="62.0" text="Vida" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_hbox_alien" stylesheets="@../../css/Stylesheet.css" HBox.hgrow="ALWAYS">
+         <children>
+            <Label layoutX="151.0" layoutY="34.0" text="Alien">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="73.0" fitWidth="91.0" layoutX="132.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/Alien.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_alien_type" layoutX="80.0" layoutY="140.0" />
+            <Label layoutX="40.0" layoutY="144.0" text="Tipo" />
+            <TextField fx:id="txt_alien_strength" layoutX="80.0" layoutY="180.0" />
+            <Label layoutX="34.0" layoutY="184.0" text="Força" />
+            <TextField fx:id="txt_alien_health" layoutX="80.0" layoutY="220.0" />
+            <Label layoutX="40.0" layoutY="224.0" text="Vida" />
+            <Button fx:id="btn_alien" layoutX="101.0" layoutY="280.0" mnemonicParsing="false" text="Enviar Alienígena" />
+            <TextArea fx:id="txt_area_alien" layoutX="40.0" layoutY="340.0" prefHeight="160.0" prefWidth="240.0" />
+            <Button fx:id="btn_alien_csv" layoutX="167.0" layoutY="509.0" mnemonicParsing="false" text="Gravar CSV" />
+         </children></AnchorPane>
+   </children>
+</HBox>
