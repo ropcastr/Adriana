@@ -14,7 +14,7 @@ public class CurvaDoDiaboTest {
 
     @BeforeEach
     void setUp() {
-        curva = new CurvaDoDiabo("Sobradinho", 10, "Curva do Diabo");
+        curva = new CurvaDoDiabo("Sobradinho", "muito perigosa", "Curva do Diabo");
         System.setOut(new PrintStream(outContent));
     }
 
@@ -33,10 +33,10 @@ public class CurvaDoDiaboTest {
     @Test
     void testGetSetAtributos() {
         curva.setLocalizacao("Brasília");
-        curva.setPerigosidade(5);
+        curva.setPerigosidade("perigosa");
         curva.setNome("Curva Perigosa");
         assertEquals("Brasília", curva.getLocalizacao());
-        assertEquals(5, curva.getPerigosidade());
+        assertEquals("perigosa", curva.getPerigosidade());
         assertEquals("Curva Perigosa", curva.getNome());
     }
 }

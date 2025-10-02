@@ -30,6 +30,11 @@ module fatec.gov.br {
     opens fatec.gov.br.e1.musica to javafx.fxml;
     exports fatec.gov.br.e1.musica;
 
+    opens fatec.gov.br.e1.video.controller to javafx.fxml;
+    exports fatec.gov.br.e1.video.controller;
+
+    opens fatec.gov.br.e1.video to javafx.fxml;
+    exports fatec.gov.br.e1.video;
 
 }
 

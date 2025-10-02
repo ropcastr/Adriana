@@ -41,4 +41,10 @@ public class Carro {
     public void roncarEmPega() {
         System.out.println("O " + modelo + " de cor " + cor + " e motor " + motor + ", está roncando em um pega na Asa Sul.");
     }
+
+    public String pilotarCarro() {
+        return "Ele tinha um " + modelo + " de cor " + cor + " e motor " + motor + ", era o rei dos pegas.";
+    }
+
+
 }

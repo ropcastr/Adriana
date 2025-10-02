@@ -41,4 +41,8 @@ public class Violao {
     public void produzirSomParaConquistar() {
         System.out.println("O violão de" + madeira + ", " + cordas + " cordas e timbre " + timbre + ", está produzindo som para conquistar meninas.");
     }
+
+    public String pegarViolao() {
+        return "E quando ele pegava seu violão de " + madeira + ", " + cordas + " cordas e timbre " + timbre + ", conquistava as meninas.";
+    }
 }

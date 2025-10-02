@@ -2,11 +2,11 @@ package fatec.gov.br.e1.musica;
 
 public class CurvaDoDiabo {
     private String localizacao;
-    private int perigosidade;
+    private String perigosidade;
     private String nome;
 
     // Construtor
-    public CurvaDoDiabo(String localizacao, int perigosidade, String nome) {
+    public CurvaDoDiabo(String localizacao, String perigosidade, String nome) {
         this.localizacao = localizacao;
         this.perigosidade = perigosidade;
         this.nome = nome;
@@ -21,11 +21,11 @@ public class CurvaDoDiabo {
         this.localizacao = localizacao;
     }
 
-    public int getPerigosidade() {
+    public String getPerigosidade() {
         return perigosidade;
     }
 
-    public void setPerigosidade(int perigosidade) {
+    public void setPerigosidade(String perigosidade) {
         this.perigosidade = perigosidade;
     }
 
@@ -40,5 +40,9 @@ public class CurvaDoDiabo {
     // Método da classe
     public void provocarAcidente() {
         System.out.println("A " + nome + " localizada em " + localizacao + " que é " + perigosidade + ", provoca um acidente de carro com explosão.");
+    }
+
+    public String acidentePega() {
+        return "E os motores saíram Ligados a mil, para a " + nome + " localizada em " + localizacao + " que é " + perigosidade + ",\nno maior pega que se viu.";
     }
 }

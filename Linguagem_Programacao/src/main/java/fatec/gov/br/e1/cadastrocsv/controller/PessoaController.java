@@ -29,13 +29,32 @@ public class PessoaController {
 
     @FXML
     public void CadastrarPessoa(ActionEvent event) {
+        try {
+            String nome = txtNome.getText();
+            String sexo = txtSexo.getText();
+            String alturaStr = txtAltura.getText();
+            String massaStr = txtMassa.getText();
 
-    Pessoa p=new Pessoa(txtNome.getText(),txtSexo.getText(),Double.parseDouble(txtAltura.getText()),Double.parseDouble(txtMassa.getText()));
-    p.salvar();
-    txtNome.setText("");
-    txtSexo.setText("");
-    txtAltura.setText("");
-    txtMassa.setText("");
+            if (nome.isEmpty() || sexo.isEmpty() || alturaStr.isEmpty() || massaStr.isEmpty()) {
+                saida.setText("Preencha todos os campos.");
+                return;
+            }
+
+            double altura = Double.parseDouble(alturaStr);
+            double massa = Double.parseDouble(massaStr);
+
+            Pessoa p = new Pessoa(nome, sexo, altura, massa);
+            p.salvar();
+            saida.setText("Pessoa cadastrada com sucesso!");
+            txtNome.setText("");
+            txtSexo.setText("");
+            txtAltura.setText("");
+            txtMassa.setText("");
+        } catch (NumberFormatException e) {
+            saida.setText("Altura e massa devem ser números válidos.");
+        } catch (Exception e) {
+            saida.setText("Erro ao cadastrar pessoa.");
+        }
     }
 
 }

@@ -43,6 +43,11 @@ public class Pessoa {
     }
 
     public void tocar() {
+
         System.out.println("Quando o " + reputacao + " tocava o violão, conquistava as meninas!");
+    }
+
+    public String PessoaInfo() {
+        return nome + " tinha " + idade + " anos, e era conhecido como: " + reputacao;
     }
 }
