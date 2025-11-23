@@ -1,78 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PaneVideo" prefHeight="601.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e1.video.controller.VideoController">
+<AnchorPane fx:id="PaneVideo" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e1.video.controller.VideoController">
    <children>
-      <MediaView fitHeight="280.0" fitWidth="200.0" layoutX="689.0" layoutY="311.0" />
-      <Label layoutX="375.0" layoutY="15.0" text="Vídeo">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
+      <!-- Seção de Mídia à direita (sem controles) -->
+      <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="400.0" layoutX="660.0" layoutY="60.0" />
+
+      <!-- Título -->
+      <Label layoutX="20.0" layoutY="15.0" text="Cozinha - Vídeo">
+         <font><Font name="System Bold" size="20.0" /></font>
       </Label>
-      <Label layoutX="14.0" layoutY="94.0" text="Nome" />
-      <TextField layoutX="90.0" layoutY="90.0" />
-      <Label layoutX="157.0" layoutY="60.0" text="Chef">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="134.0" text="Experiência" />
-      <TextField layoutX="90.0" layoutY="130.0" />
-      <Label layoutX="14.0" layoutY="174.0" text="Especialidade" />
-      <TextField layoutX="90.0" layoutY="170.0" />
-      <Label layoutX="14.0" layoutY="264.0" text="Nome" />
-      <TextField layoutX="90.0" layoutY="260.0" />
-      <Label layoutX="123.0" layoutY="230.0" text="Ingredientes">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="304.0" text="Quantidade" />
-      <TextField layoutX="90.0" layoutY="300.0" />
-      <Label layoutX="14.0" layoutY="344.0" text="Unidade" />
-      <TextField layoutX="90.0" layoutY="340.0" />
-      <Label layoutX="14.0" layoutY="434.0" text="Nome" />
-      <TextField layoutX="90.0" layoutY="430.0" />
-      <Label layoutX="132.0" layoutY="400.0" text="Utensílios">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="474.0" text="Experiência" />
-      <TextField layoutX="90.0" layoutY="470.0" />
-      <Label layoutX="14.0" layoutY="514.0" text="Especialidade" />
-      <TextField layoutX="90.0" layoutY="510.0" />
-      <TextArea layoutX="255.0" layoutY="430.0" prefHeight="160.0" prefWidth="420.0" />
-      <Label layoutX="389.0" layoutY="400.0" text="Método">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <TableView layoutX="255.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0">
+
+      <!-- Coluna de Inputs -->
+      <Label layoutX="20.0" layoutY="55.0" text="Chef" style="-fx-font-weight:bold;" />
+      <Label layoutX="20.0" layoutY="85.0" text="Nome" />
+      <TextField fx:id="txtChefNome" layoutX="100.0" layoutY="80.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="120.0" text="Experiência" />
+      <TextField fx:id="txtChefExperiencia" layoutX="100.0" layoutY="115.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="155.0" text="Especialidade" />
+      <TextField fx:id="txtChefEspecialidade" layoutX="100.0" layoutY="150.0" prefWidth="160" />
+
+      <Label layoutX="20.0" layoutY="195.0" text="Ingrediente" style="-fx-font-weight:bold;" />
+      <Label layoutX="20.0" layoutY="225.0" text="Nome" />
+      <TextField fx:id="txtIngNome" layoutX="100.0" layoutY="220.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="260.0" text="Quantidade" />
+      <TextField fx:id="txtIngQuantidade" layoutX="100.0" layoutY="255.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="295.0" text="Unidade" />
+      <TextField fx:id="txtIngUnidade" layoutX="100.0" layoutY="290.0" prefWidth="160" />
+
+      <Label layoutX="20.0" layoutY="330.0" text="Utensílio" style="-fx-font-weight:bold;" />
+      <Label layoutX="20.0" layoutY="360.0" text="Tipo" />
+      <TextField fx:id="txtUteTipo" layoutX="100.0" layoutY="355.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="395.0" text="Material" />
+      <TextField fx:id="txtUteMaterial" layoutX="100.0" layoutY="390.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="430.0" text="Tamanho" />
+      <TextField fx:id="txtUteTamanho" layoutX="100.0" layoutY="425.0" prefWidth="160" />
+
+      <Button fx:id="btnCozinhar" layoutX="100.0" layoutY="470.0" text="Cozinhar" onAction="#cozinhar" prefWidth="160" />
+      <Label fx:id="lblStatus" layoutX="100.0" layoutY="505.0" textFill="#e40808" prefWidth="300" />
+
+      <!-- Tabelas -->
+      <TableView fx:id="tableChef" layoutX="300.0" layoutY="60.0" prefHeight="150.0" prefWidth="340.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="colChefNome" prefWidth="110.0" text="Nome" />
+          <TableColumn fx:id="colChefExperiencia" prefWidth="80.0" text="Exp" />
+          <TableColumn fx:id="colChefEspecialidade" prefWidth="110.0" text="Especialidade" />
+          <TableColumn fx:id="colChefTimestamp" prefWidth="140.0" text="Criado Em" />
         </columns>
       </TableView>
-      <TableView layoutX="470.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0">
+
+      <TableView fx:id="tableIngrediente" layoutX="300.0" layoutY="225.0" prefHeight="150.0" prefWidth="340.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="colIngNome" prefWidth="150.0" text="Nome" />
+            <TableColumn fx:id="colIngQuantidade" prefWidth="90.0" text="Qtd" />
+            <TableColumn fx:id="colIngUnidade" prefWidth="90.0" text="Unidade" />
          </columns>
       </TableView>
-      <TableView layoutX="686.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0">
+
+      <TableView fx:id="tableUtensilio" layoutX="300.0" layoutY="390.0" prefHeight="150.0" prefWidth="340.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="colUteTipo" prefWidth="130.0" text="Tipo" />
+            <TableColumn fx:id="colUteMaterial" prefWidth="110.0" text="Material" />
+            <TableColumn fx:id="colUteTamanho" prefWidth="100.0" text="Tamanho" />
          </columns>
       </TableView>
+
+      <!-- Log abaixo do vídeo -->
+      <TextArea fx:id="txtAreaLog" layoutX="660.0" layoutY="380.0" prefHeight="160.0" prefWidth="400.0" promptText="Log de preparo" />
    </children>
 </AnchorPane>

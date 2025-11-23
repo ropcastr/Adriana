@@ -26,7 +26,7 @@ public class CurvaDoDiaboTest {
     @Test
     void testProvocarAcidente() {
         curva.provocarAcidente();
-        String expectedOutput = "A Curva do Diabo provoca um acidente com explosão na estrada." + System.lineSeparator();
+        String expectedOutput = "A Curva do Diabo localizada em Sobradinho que é muito perigosa, provoca um acidente de carro com explosão." + System.lineSeparator();
         assertEquals(expectedOutput.replaceAll("\r\n", "\n"), outContent.toString().replaceAll("\r\n", "\n"));
     }
 

@@ -9,6 +9,7 @@ public class Chef {
     private String especialidade;
     private List<Utensilio> utensilios = new ArrayList<>();
     private List<Ingrediente> ingredientes = new ArrayList<>();
+    private java.time.LocalDateTime criadoEm = java.time.LocalDateTime.now();
 
     public Chef(String nome, int experiencia, String especialidade) {
         this.nome = nome;
@@ -100,5 +101,9 @@ public class Chef {
         if (!ingredientes.contains(ingrediente)) {
             ingredientes.add(ingrediente);
         }
+    }
+
+    public String getCriadoEm() {
+        return criadoEm.format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 }

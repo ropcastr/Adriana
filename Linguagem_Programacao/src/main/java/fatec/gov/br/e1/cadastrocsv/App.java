@@ -17,8 +17,15 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("/ei/ui/cadastrocsv/pessoa"), 640, 480);
+        // Carrega a cena principal (usar caminho absoluto de recurso)
+        scene = new Scene(loadFXML("/ei/ui/cadastrocsv/pessoa"), 740, 493);
+        // Aplica stylesheet global
+        var css = App.class.getResource("/ei/css/Stylesheet.css");
+        if (css != null) {
+            scene.getStylesheets().add(css.toExternalForm());
+        }
         stage.setScene(scene);
+        stage.setTitle("Cadastro de Pessoa");
         stage.show();
     }
 
@@ -27,7 +34,8 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        String normalized = fxml.startsWith("/") ? fxml : "/" + fxml;
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(normalized + ".fxml"));
         return fxmlLoader.load();
     }
 
@@ -36,4 +44,3 @@ public class App extends Application {
     }
 
 }
-

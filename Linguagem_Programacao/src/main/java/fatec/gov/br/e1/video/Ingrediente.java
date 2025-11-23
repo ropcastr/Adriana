@@ -64,7 +64,6 @@ public class Ingrediente {
     public void adicionarUtensilio(Utensilio utensilio) {
         if (!utensilios.contains(utensilio)) {
             utensilios.add(utensilio);
-            utensilio.adicionarIngrediente(this);
         }
     }
 }

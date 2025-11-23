@@ -4,6 +4,7 @@ module fatec.gov.br {
     requires javafx.fxml;
     requires java.desktop;
     requires java.sql;
+    requires javafx.media;
 
 
     opens fatec.gov.br to javafx.fxml;
@@ -36,6 +37,10 @@ module fatec.gov.br {
     opens fatec.gov.br.e1.video to javafx.fxml;
     exports fatec.gov.br.e1.video;
 
+    opens fatec.gov.br.e1.calculomedia.controller to javafx.fxml;
+    exports fatec.gov.br.e1.calculomedia.controller;
+
+    opens fatec.gov.br.e1.calculomedia to javafx.fxml;
+    exports fatec.gov.br.e1.calculomedia;
+
 }
-
-
