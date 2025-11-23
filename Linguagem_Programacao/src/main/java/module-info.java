@@ -43,4 +43,36 @@ module fatec.gov.br {
     opens fatec.gov.br.e1.calculomedia to javafx.fxml;
     exports fatec.gov.br.e1.calculomedia;
 
+    opens fatec.gov.br.e2.cadastrocsv to javafx.fxml;
+    exports fatec.gov.br.e2.cadastrocsv;
+
+    opens fatec.gov.br.e2.cadastrocsv.controller to javafx.fxml;
+    exports fatec.gov.br.e2.cadastrocsv.controller;
+
+    opens fatec.gov.br.e2.calculomedia to javafx.fxml;
+    exports fatec.gov.br.e2.calculomedia;
+
+    opens fatec.gov.br.e2.calculomedia.controller to javafx.fxml;
+    exports fatec.gov.br.e2.calculomedia.controller;
+
+    opens fatec.gov.br.e2.imagens.doodle to javafx.fxml;
+    exports fatec.gov.br.e2.imagens.doodle;
+
+    opens fatec.gov.br.e2.imagens.vikmuniz to javafx.fxml;
+    exports fatec.gov.br.e2.imagens.vikmuniz;
+
+    opens fatec.gov.br.e2.imagens.controllers to javafx.fxml;
+    exports fatec.gov.br.e2.imagens.controllers;
+
+    opens fatec.gov.br.e2.musica to javafx.fxml;
+    exports fatec.gov.br.e2.musica;
+
+    opens fatec.gov.br.e2.musica.controller to javafx.fxml;
+    exports fatec.gov.br.e2.musica.controller;
+
+    opens fatec.gov.br.e2.video to javafx.fxml;
+    exports fatec.gov.br.e2.video;
+
+    opens fatec.gov.br.e2.video.controller to javafx.fxml;
+    exports fatec.gov.br.e2.video.controller;
 }

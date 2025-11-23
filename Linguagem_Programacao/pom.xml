@@ -56,6 +56,11 @@
             <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.45.3.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -97,6 +102,42 @@
             <id>video</id>
             <properties>
                 <javafx.main.class>fatec.gov.br/fatec.gov.br.e1.video.Main</javafx.main.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>cadastro-db</id>
+            <properties>
+                <javafx.main.class>fatec.gov.br/fatec.gov.br.e2.cadastrocsv.AppDbFx</javafx.main.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>calculomedia-db</id>
+            <properties>
+                <javafx.main.class>fatec.gov.br/fatec.gov.br.e2.calculomedia.CalculoMediaDbApp</javafx.main.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>imagens-db</id>
+            <properties>
+                <javafx.main.class>fatec.gov.br/fatec.gov.br.e2.imagens.vikmuniz.VikMunizDbApp</javafx.main.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>doodle-db</id>
+            <properties>
+                <javafx.main.class>fatec.gov.br/fatec.gov.br.e2.imagens.doodle.DoodleDbApp</javafx.main.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>musica-db</id>
+            <properties>
+                <javafx.main.class>fatec.gov.br/fatec.gov.br.e2.musica.DezesseisDbApp</javafx.main.class>
+            </properties>
+        </profile>
+        <profile>
+            <id>video-db</id>
+            <properties>
+                <javafx.main.class>fatec.gov.br/fatec.gov.br.e2.video.VideoDbApp</javafx.main.class>
             </properties>
         </profile>
     </profiles>

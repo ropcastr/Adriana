@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e2.imagens.controllers.VikMunizDbController">
+   <children>
+      <Label layoutX="111.0" layoutY="14.0" text="Paparazzi (DB)"><font><Font name="System Bold" size="20.0" /></font></Label>
+      <Label layoutX="20.0" layoutY="95.0" text="Modelo" />
+      <Label layoutX="20.0" layoutY="135.0" text="Lente" />
+      <Label layoutX="20.0" layoutY="175.0" text="Resolução" />
+      <TextField fx:id="txtCameraModeloDb" layoutX="88.0" layoutY="91.0" />
+      <TextField fx:id="txtTipoLenteDb" layoutX="88.0" layoutY="131.0" />
+      <TextField fx:id="txtResolucaoDb" layoutX="88.0" layoutY="171.0" />
+      <Label layoutX="18.0" layoutY="251.0" text="Nome" />
+      <Label layoutX="17.0" layoutY="289.0" text="Tipo Câmera" />
+      <Label layoutX="17.0" layoutY="331.0" text="Experiência" />
+      <TextField fx:id="txtFotografoNomeDb" layoutX="88.0" layoutY="247.0" />
+      <TextField fx:id="txtTipoCameraDb" layoutX="88.0" layoutY="287.0" />
+      <TextField fx:id="txtExperienciaDb" layoutX="88.0" layoutY="327.0" />
+      <Label layoutX="15.0" layoutY="406.0" text="Marca" />
+      <Label layoutX="13.0" layoutY="446.0" text="Sensibilidade" />
+      <Label layoutX="13.0" layoutY="486.0" text="Comp. Cabo" />
+      <TextField fx:id="txtMicrofoneMarcaDb" layoutX="88.0" layoutY="402.0" />
+      <TextField fx:id="txtMicrofoneSensibilidadeDb" layoutX="88.0" layoutY="442.0" />
+      <TextField fx:id="txtMicrofoneCompCaboDb" layoutX="88.0" layoutY="482.0" />
+      <Label layoutX="245.0" layoutY="446.0" text="decibéis" />
+      <Label layoutX="245.0" layoutY="486.0" text="metros" />
+      <Label layoutX="245.0" layoutY="331.0" text="anos" />
+      <Label layoutX="245.0" layoutY="175.0" text="mega pixels" />
+      <Label layoutX="673.0" layoutY="135.0" text="1 a 10" />
+      <Label layoutX="673.0" layoutY="249.0" text="km" />
+      <Label layoutX="671.0" layoutY="329.0" text="mm" />
+      <Label layoutX="673.0" layoutY="444.0" text="1 a 10" />
+      <Label layoutX="673.0" layoutY="484.0" text="segundos" />
+      <Separator layoutX="399.0" orientation="VERTICAL" prefHeight="600.0" />
+      <Button fx:id="btnGravarPapparazziDb" layoutX="88.0" layoutY="560.0" mnemonicParsing="false" onAction="#gravarAtributosPapparazziDb" text="Gravar" />
+      <Button fx:id="btnExibirPapparazziDb" layoutX="172.0" layoutY="560.0" mnemonicParsing="false" onAction="#exibirAtributosPapparazziDb" text="Popup" />
+      <Label layoutX="534.0" layoutY="14.0" text="Track Brawl (DB)"><font><Font name="System Bold" size="20.0" /></font></Label>
+      <Label layoutX="446.0" layoutY="93.0" text="Nome" />
+      <Label layoutX="446.0" layoutY="133.0" text="Força" />
+      <Label layoutX="446.0" layoutY="173.0" text="Posição" />
+      <TextField fx:id="txtBrwalNomeDb" layoutX="514.0" layoutY="89.0" />
+      <TextField fx:id="txtBrawlForcaDb" layoutX="514.0" layoutY="129.0" />
+      <TextField fx:id="txtBrawlPosicaoDb" layoutX="514.0" layoutY="169.0" />
+      <Label layoutX="438.0" layoutY="251.0" text="Comprimento" />
+      <Label layoutX="439.0" layoutY="290.0" text="Material" />
+      <Label layoutX="438.0" layoutY="329.0" text="Bitola" />
+      <TextField fx:id="txtTrilhoComprimentoDb" layoutX="514.0" layoutY="245.0" />
+      <TextField fx:id="txtTrilhoMaterialDb" layoutX="514.0" layoutY="285.0" />
+      <TextField fx:id="txtTrilhoBitolaDb" layoutX="514.0" layoutY="325.0" />
+      <Label layoutX="442.0" layoutY="404.0" text="Nome" />
+      <Label layoutX="440.0" layoutY="444.0" text="Pontuação" />
+      <Label layoutX="438.0" layoutY="484.0" text="Tempo Vitória" />
+      <TextField fx:id="txtVencedorNomeDb" layoutX="514.0" layoutY="400.0" />
+      <TextField fx:id="txtVencedorPontuacaoDb" layoutX="514.0" layoutY="440.0" />
+      <TextField fx:id="txtVencedorTempoVitoriaDb" layoutX="514.0" layoutY="480.0" />
+      <Button fx:id="btnGravarTrackBrawlDb" layoutX="514.0" layoutY="560.0" mnemonicParsing="false" onAction="#gravarAtributosTrackBrawlDb" text="Gravar" />
+      <Button fx:id="btnExibirTrackBrawlDb" layoutX="598.0" layoutY="560.0" mnemonicParsing="false" onAction="#exibirAtributosTrackBrawlDb" text="Popup" />
+      <Label layoutX="323.0" layoutY="500.0" text="Status:">
+         <font><Font size="12.0" /></font>
+      </Label>
+      <TextArea fx:id="txtAreaStatusDb" layoutX="323.0" layoutY="520.0" prefWidth="160.0" prefHeight="100.0" wrapText="true" />
+   </children>
+</AnchorPane>

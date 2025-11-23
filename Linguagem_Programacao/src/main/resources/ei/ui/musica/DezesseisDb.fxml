@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="PaneDezesseisDb" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../css/StylesheetMusica.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e2.musica.controller.DezesseisDbController">
+   <children>
+      <Label layoutX="114.0" layoutY="20.0" text="Pessoa (DB)"><font><Font name="System Bold" size="18.0" /></font></Label>
+      <Label layoutX="120.0" layoutY="160.0" text="Carro (DB)"><font><Font name="System Bold" size="18.0" /></font></Label>
+      <TextField fx:id="txtPessoaNome" layoutX="69.0" layoutY="45.0" />
+      <Label layoutX="12.0" layoutY="49.0" text="Nome" />
+      <TextField fx:id="txtPessoaIdade" layoutX="69.0" layoutY="85.0" />
+      <Label layoutX="13.0" layoutY="89.0" text="Idade" />
+      <TextField fx:id="txtPessoaReputacao" layoutX="69.0" layoutY="125.0" />
+      <Label layoutX="6.0" layoutY="134.0" text="Reputação"><font><Font size="11.0" /></font></Label>
+      <TextField fx:id="txtCarroModelo" layoutX="69.0" layoutY="185.0" />
+      <Label layoutX="12.0" layoutY="189.0" text="Modelo" />
+      <TextField fx:id="txtCarroCor" layoutX="69.0" layoutY="225.0" />
+      <Label layoutX="12.0" layoutY="229.0" text="Cor" />
+      <TextField fx:id="txtCarroMotor" layoutX="69.0" layoutY="265.0" />
+      <Label layoutX="12.0" layoutY="269.0" text="Motor" />
+      <Label layoutX="115.0" layoutY="300.0" text="Violão (DB)"><font><Font name="System Bold" size="18.0" /></font></Label>
+      <Label layoutX="111.0" layoutY="440.0" text="Estrada (DB)"><font><Font name="System Bold" size="18.0" /></font></Label>
+      <TextField fx:id="txtViolaoCordas" layoutX="69.0" layoutY="325.0" />
+      <Label layoutX="12.0" layoutY="329.0" text="Cordas" />
+      <TextField fx:id="txtViolaoMadeira" layoutX="69.0" layoutY="365.0" />
+      <Label layoutX="13.0" layoutY="369.0" text="Madeira" />
+      <TextField fx:id="txtViolaoTimbre" layoutX="69.0" layoutY="405.0" />
+      <Label layoutX="12.0" layoutY="409.0" text="Timbre" />
+      <TextField fx:id="txtCurvaDiaboNome" layoutX="69.0" layoutY="465.0" />
+      <Label layoutX="10.0" layoutY="469.0" text="Nome" />
+      <TextField fx:id="txtCurvaDiaboLocalizacao" layoutX="69.0" layoutY="505.0" />
+      <Label layoutX="5.0" layoutY="510.0" text="Localização" />
+      <TextField fx:id="txtCurvaDiaboPerigosidade" layoutX="69.0" layoutY="545.0" />
+      <Label layoutX="3.0" layoutY="550.0" text="Perigosidade"><font><Font size="11.0" /></font></Label>
+      <Button fx:id="btnGravarAtributosDb" layoutX="230.0" layoutY="189.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" text="Gravar" />
+      <Button fx:id="btnRecarregarDb" layoutX="230.0" layoutY="329.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" text="Recarregar" />
+      <Button fx:id="btnExportarCsvDb" layoutX="230.0" layoutY="465.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Exportar" />
+      <Button fx:id="btnLimparBancoDb" layoutX="230.0" layoutY="525.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Limpar" />
+      <TextArea fx:id="txtAreaMetodoDb" layoutX="320.0" layoutY="424.0" prefHeight="160.0" prefWidth="466.0" wrapText="true" />
+      <TableView fx:id="tableViePessoaDb" layoutX="322.0" layoutY="23.0" prefHeight="170.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="tablePessoaColunaNomeDb" prefWidth="99.0" text="Nome" />
+          <TableColumn fx:id="tablePessoaColunaIdadeDb" prefWidth="44.0" text="Idade" />
+          <TableColumn fx:id="tablePessoaColunaReputacaoDb" prefWidth="80.0" text="Reputação" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableViewCarroDb" layoutX="560.0" layoutY="23.0" prefHeight="170.0" prefWidth="226.0">
+         <columns>
+            <TableColumn fx:id="tableCarroColunaModeloDb" prefWidth="87.0" text="Modelo" />
+            <TableColumn fx:id="tableCarroColunaCorDb" prefWidth="68.0" text="Cor" />
+            <TableColumn fx:id="tableCarroColunaMotorDb" prefWidth="67.0" text="Motor" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableViewViolaoDb" layoutX="322.0" layoutY="215.0" prefHeight="170.0" prefWidth="226.0">
+         <columns>
+            <TableColumn fx:id="tableViolaoColunaCordasDb" prefWidth="59.0" text="Cordas" />
+            <TableColumn fx:id="tableViolaoColunaMadeiraDb" prefWidth="83.0" text="Madeira" />
+            <TableColumn fx:id="tableViolaoColunaTimbreDb" prefWidth="81.0" text="Timbre" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableViewCurvaDiaboDb" layoutX="560.0" layoutY="215.0" prefHeight="170.0" prefWidth="226.0">
+         <columns>
+            <TableColumn fx:id="tableCurvaDiaboColunaNomeDb" prefWidth="81.0" text="Nome" />
+            <TableColumn fx:id="tableCurvaDiaboColunaLocalizacaoDb" prefWidth="72.0" text="Localização" />
+            <TableColumn fx:id="tableCurvaDiaboColunaPerigosidadeDb" prefWidth="69.0" text="Perigosidade" />
+         </columns>
+      </TableView>
+      <Label layoutX="517.0" layoutY="395.0" text="Método (DB)"><font><Font name="System Bold" size="18.0" /></font></Label>
+   </children>
+</AnchorPane>

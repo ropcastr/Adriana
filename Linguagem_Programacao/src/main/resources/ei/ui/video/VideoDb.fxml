@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="PaneVideoDb" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fatec.gov.br.e2.video.controller.VideoDbController">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="400.0" layoutX="660.0" layoutY="60.0" />
+      <Label layoutX="20.0" layoutY="15.0" text="Cozinha - Vídeo (DB)"><font><Font name="System Bold" size="20.0" /></font></Label>
+      <Label layoutX="20.0" layoutY="55.0" text="Chef" style="-fx-font-weight:bold;" />
+      <Label layoutX="20.0" layoutY="85.0" text="Nome" />
+      <TextField fx:id="txtChefNome" layoutX="100.0" layoutY="80.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="120.0" text="Experiência" />
+      <TextField fx:id="txtChefExperiencia" layoutX="100.0" layoutY="115.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="155.0" text="Especialidade" />
+      <TextField fx:id="txtChefEspecialidade" layoutX="100.0" layoutY="150.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="195.0" text="Ingrediente" style="-fx-font-weight:bold;" />
+      <Label layoutX="20.0" layoutY="225.0" text="Nome" />
+      <TextField fx:id="txtIngNome" layoutX="100.0" layoutY="220.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="260.0" text="Quantidade" />
+      <TextField fx:id="txtIngQuantidade" layoutX="100.0" layoutY="255.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="295.0" text="Unidade" />
+      <TextField fx:id="txtIngUnidade" layoutX="100.0" layoutY="290.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="330.0" text="Utensílio" style="-fx-font-weight:bold;" />
+      <Label layoutX="20.0" layoutY="360.0" text="Tipo" />
+      <TextField fx:id="txtUteTipo" layoutX="100.0" layoutY="355.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="395.0" text="Material" />
+      <TextField fx:id="txtUteMaterial" layoutX="100.0" layoutY="390.0" prefWidth="160" />
+      <Label layoutX="20.0" layoutY="430.0" text="Tamanho" />
+      <TextField fx:id="txtUteTamanho" layoutX="100.0" layoutY="425.0" prefWidth="160" />
+      <Button fx:id="btnCozinharDb" layoutX="100.0" layoutY="470.0" text="Cozinhar" prefWidth="160" />
+      <Button fx:id="btnLimparDb" layoutX="100.0" layoutY="505.0" text="Limpar Banco" prefWidth="160" />
+      <Label fx:id="lblStatus" layoutX="100.0" layoutY="540.0" textFill="#e40808" prefWidth="300" />
+      <TableView fx:id="tableChef" layoutX="300.0" layoutY="60.0" prefHeight="150.0" prefWidth="340.0">
+        <columns>
+          <TableColumn fx:id="colChefNome" prefWidth="110.0" text="Nome" />
+          <TableColumn fx:id="colChefExperiencia" prefWidth="80.0" text="Exp" />
+          <TableColumn fx:id="colChefEspecialidade" prefWidth="110.0" text="Especialidade" />
+          <TableColumn fx:id="colChefTimestamp" prefWidth="140.0" text="Criado Em" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableIngrediente" layoutX="300.0" layoutY="225.0" prefHeight="150.0" prefWidth="340.0">
+         <columns>
+            <TableColumn fx:id="colIngNome" prefWidth="150.0" text="Nome" />
+            <TableColumn fx:id="colIngQuantidade" prefWidth="90.0" text="Qtd" />
+            <TableColumn fx:id="colIngUnidade" prefWidth="90.0" text="Unidade" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableUtensilio" layoutX="300.0" layoutY="390.0" prefHeight="150.0" prefWidth="340.0">
+         <columns>
+            <TableColumn fx:id="colUteTipo" prefWidth="130.0" text="Tipo" />
+            <TableColumn fx:id="colUteMaterial" prefWidth="110.0" text="Material" />
+            <TableColumn fx:id="colUteTamanho" prefWidth="100.0" text="Tamanho" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="txtAreaLog" layoutX="660.0" layoutY="380.0" prefHeight="160.0" prefWidth="400.0" promptText="Log de preparo" />
+   </children>
+</AnchorPane>
+
